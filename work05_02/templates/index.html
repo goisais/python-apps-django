@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static '/style.css' %}">
+</head>
+<body>
+  <div class="profile-container">
+    <h1>プロフィール</h1>
+
+    <section class="intro">
+      <h2>自己紹介</h2>
+      <div class="intro-content">
+        <div class="info">
+          <p><span class="label">名前</span>{{name}}</p>
+          <p><span class="label">学校</span> KADOKAWA情報工科専門学院</p>
+          <p><span class="label">出身</span> 山口県</p>
+          <p><span class="label">誕生日</span> 12/06</p>
+        </div>
+        <div class="photo">
+          <!-- <img src="image/G.jpeg" alt="プロフィール写真"> -->
+          <img src="{% static 'image/G.jpeg' %}" alt="プロフィール写真" width="200">
+        </div>
+      </div>
+    </section>
+
+    <section class="extra">
+      <div class="card">
+        <h3>制作した作品</h3>
+        <p>数字ガチャ</p>
+      </div>
+      <div class="card">
+        <h3>好きな事・趣味</h3>
+        <p>漫画、映画</p>
+      </div>
+    </section>
+
+    <section class="challenge">
+      <h3>学びたいことやチャレンジしたいこと</h3>
+      <p>実際に使える事を学んでバイトする</p>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  background-color: #fdfdfd;
+  margin: 20px;
+  padding: 20px;
+}
+
+.profile-container {
+  max-width: 7777px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  margin-bottom: 10px;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #eee;
+  flex-shrink: 0;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.challenge {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 600px) {
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    margin-top: 15px;
+  }
+
+  .extra {
+    flex-direction: column;
+  }
+}
