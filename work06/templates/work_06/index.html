@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<link rel="stylesheet" href="{% static 'work06/style.css' %}">
+<head>
+  <meta charset="UTF-8">
+  <title>令和 → 西暦ツール</title>
+</head>
+<body>
+  <h1>令和 → 西暦変換ツール</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">変換</button>
+  </form>
+
+  {% if seireki %}
+    <h2>結果：西暦 {{ seireki }} 年です！</h2>
+  {% endif %}
+</body>
+</html>
