@@ -26,9 +26,9 @@ def top(request):
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("work05/", include("work05_02.urls")),
-    path("work06/", include("work06.urls")),
-    path("work07/", include("work07.urls")),
-    path("facebank/", include("bankapp.urls")),
+    path("work05/", include("work05_02.urls"), name="work05"),
+    path("work06/", include("work06.urls"), name="work06"),
+    path("work07/", include("work07.urls"), name="work07"),
+    path("facebank/", include("bankapp.urls"), name="facebank"),
     path("", top, name="top"),
 ]
