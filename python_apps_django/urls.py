@@ -17,6 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from django.shortcuts import render
+
+
+def top(request):
+    return render(request, "top.html")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -24,5 +30,5 @@ urlpatterns = [
     path("work06/", include("work06.urls")),
     path("work07/", include("work07.urls")),
     path("facebank/", include("bankapp.urls")),
-    path("", include("top.urls"))
+    path("", top, name="top"),
 ]
