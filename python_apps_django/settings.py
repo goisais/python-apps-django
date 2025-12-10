@@ -172,4 +172,4 @@ if os.environ.get("ENABLE_BASIC_AUTH") or "false" == "true":
             "BASIC_AUTH_PASSWORD")),
     }
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+DIR = BASE_DIR / "templates"
