@@ -1,6 +1,10 @@
 from django.shortcuts import render
 
 
+def top_index(request):
+    return render(request, "top/index.html")
+
+
 def work05_index(request):
     return render(request, "work05_02/templates/index.html")
 

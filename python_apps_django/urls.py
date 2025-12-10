@@ -24,5 +24,5 @@ urlpatterns = [
     path("work06/", include("work06.urls")),
     path("work07/", include("work07.urls")),
     path("facebank/", include("bankapp.urls")),
-    path("top/", include("top.urls"))
+    path("", include("top.urls"))
 ]
