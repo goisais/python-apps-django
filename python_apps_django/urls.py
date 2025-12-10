@@ -17,7 +17,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
-from bankapp.views import top
+from django.shortcuts import render
+
+
+def top(request):
+    return render(request, "top.html")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),

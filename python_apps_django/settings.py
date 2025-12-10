@@ -74,7 +74,7 @@ ROOT_URLCONF = "python_apps_django.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -171,5 +171,3 @@ if os.environ.get("ENABLE_BASIC_AUTH") or "false" == "true":
         os.environ.get("BASIC_AUTH_USERNAME"): os.environ.get((
             "BASIC_AUTH_PASSWORD")),
     }
-
-DIR = BASE_DIR / "templates"

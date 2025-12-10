@@ -51,7 +51,3 @@ def index(request):
             return redirect("result", mood=mood, amount=amount)
 
     return render(request, "bankapp/index.html")
-
-
-def top(request):
-    return render(request, "top.html")
