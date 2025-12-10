@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,8 +12,8 @@
 <p>今日の気分：{{ mood }}</p>
 <p>貯金額：{{ amount }} 円</p>
 
-<a href="{% url 'index' %}">トップへ戻る</a>
-<a href="{% url 'history' %}">履歴を見る</a>
+<a class="button" href="{% url 'index' %}">トップへ戻る</a>
+<a class="button" href="{% url 'history' %}">履歴を見る</a>
 
 </body>
 </html>
