@@ -1,28 +1,18 @@
 body {
-    text-align: center;
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #f9f9f9;
 }
 
 button {
-    /* 四角くする */
-    border-radius: 0;
-    /* 見た目を整える */
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    padding: 0.6rem 1.2rem;
-    font-size: 1.25rem;
-    /* 大きさを適切に調整 */
-    margin: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.15s, border-color 0.15s;
-    /* アイコンだけでなくテキストも中央揃えにする */
-    display: inline-block;
+  font-size: 3rem;
+  margin: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 button:hover {
-    transform: scale(1.03);
-    /* 少しだけ拡大に調整 */
-    border-color: #bbb;
-    background-color: #fafafa;
+  transform: scale(1.3);
 }
