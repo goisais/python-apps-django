@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "work06",
     "work07",
     'bankapp',
+    'templates',
 ]
 
 MIDDLEWARE = [
