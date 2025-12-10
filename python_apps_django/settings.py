@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "work06",
     "work07",
     'bankapp',
+    "templates"
 ]
 
 MIDDLEWARE = [
@@ -171,4 +172,4 @@ if os.environ.get("ENABLE_BASIC_AUTH") or "false" == "true":
             "BASIC_AUTH_PASSWORD")),
     }
 
-DIR = BASE_DIR / "templates"
+BASE_DIR = Path(__file__).resolve().parent.parent
