@@ -171,3 +171,7 @@ if os.environ.get("ENABLE_BASIC_AUTH") or "false" == "true":
         os.environ.get("BASIC_AUTH_USERNAME"): os.environ.get((
             "BASIC_AUTH_PASSWORD")),
     }
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://python-apps-django-production-5fb8.up.railway.app',
+]
