@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>履歴</title>
+</head>
+<body>
+
+<h1>貯金履歴</h1>
+
+{% if records %}
+    <ul>
+        {% for r in records %}
+            <li>{{ r.created_at }}：気分 {{ r.mood }} ／ {{ r.amount }} 円</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>まだ履歴がありません。</p>
+{% endif %}
+
+<a href="{% url 'index' %}">トップへ戻る</a>
+
+</body>
+</html>

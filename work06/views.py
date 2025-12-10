@@ -14,4 +14,3 @@ def reiwa_to_seireki(request):
     return render(
         request, "work_06/index.html", {"form": form, "seireki": seireki}
         )
-

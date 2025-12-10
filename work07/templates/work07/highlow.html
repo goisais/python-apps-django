@@ -3,21 +3,21 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>じゃんけん</title>
+    <title>Hi & Low</title>
     <link rel="stylesheet" href="{% static 'work07/style.css' %}">
 </head>
 <body>
-    <h1>じゃんけん ✊✌️🖐️</h1>
+    <h1>Hi & Low 🔼🔽</h1>
+    <p>現在の数字：{{ num1 }}</p>
 
     {% if result %}
-        <p>あなた：{{ player }} / コンピュータ：{{ cpu }}</p>
+        <p>次の数字：{{ num2 }}</p>
         <p><strong>{{ result }}</strong></p>
     {% endif %}
 
     <form method="get">
-        <button name="hand" value="グー">グー</button>
-        <button name="hand" value="チョキ">チョキ</button>
-        <button name="hand" value="パー">パー</button>
+        <button name="choice" value="high">High</button>
+        <button name="choice" value="low">Low</button>
     </form>
 
     <p><a href="{% url 'index' %}">← トップに戻る</a></p>

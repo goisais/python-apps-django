@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure--&#n0piw!u#bfr7@)++q)jw_&g19%9wqci(-0*gh9bydw!lji*"
+SECRET_KEY = (
+    "django-insecure--&#n0piw!u#bfr7@)++q)jw_&g19%9wqci(-0*gh9bydw!lji*")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +38,8 @@ DEBUG = True
 # ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = (os.environ.get("ALLOWED_HOSTS") or "").split(",")
 # deploy for Railway
-CSRF_TRUSTED_ORIGINS = (os.environ.get("CSRF_TRUSTED_ORIGINS") or "").split(",")
+CSRF_TRUSTED_ORIGINS = (
+    (os.environ.get("CSRF_TRUSTED_ORIGINS") or "").split(","))
 
 
 # Application definition
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
     "work05_02",
     "work06",
     "work07",
+    'bankapp',
 ]
 
 MIDDLEWARE = [
@@ -113,13 +116,22 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": ("django.contrib.auth.password_validation." "MinimumLengthValidator"),
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "MinimumLengthValidator"
+        ),
     },
     {
-        "NAME": ("django.contrib.auth.password_validation." "CommonPasswordValidator"),
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "CommonPasswordValidator"
+        ),
     },
     {
-        "NAME": ("django.contrib.auth.password_validation." "NumericPasswordValidator"),
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "NumericPasswordValidator"
+        ),
     },
 ]
 
@@ -155,5 +167,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if os.environ.get("ENABLE_BASIC_AUTH") or "false" == "true":
     MIDDLEWARE.append("basicauth.middleware.BasicAuthMiddleware")
     BASICAUTH_USERS = {
-        os.environ.get("BASIC_AUTH_USERNAME"): os.environ.get("BASIC_AUTH_PASSWORD"),
+        os.environ.get("BASIC_AUTH_USERNAME"): os.environ.get((
+            "BASIC_AUTH_PASSWORD")),
     }

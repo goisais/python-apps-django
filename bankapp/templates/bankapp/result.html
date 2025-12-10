@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>結果</title>
+</head>
+<body>
+
+<h1>今日の結果</h1>
+
+<p>今日の気分：{{ mood }}</p>
+<p>貯金額：{{ amount }} 円</p>
+
+<a href="{% url 'index' %}">トップへ戻る</a>
+<a href="{% url 'history' %}">履歴を見る</a>
+
+</body>
+</html>

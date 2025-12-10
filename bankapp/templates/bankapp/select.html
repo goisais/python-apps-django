@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>気分を選択</title>
+</head>
+<body>
+
+<h1>今日の気分を選んでください</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label>
+            <input type="radio" name="mood" value="happy" required> 嬉しい
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="mood" value="normal"> 普通
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" name="mood" value="sad"> 悲しい
+        </label>
+    </p>
+
+    <button type="submit">決定</button>
+</form>
+
+<a href="{% url 'history' %}">履歴を見る</a>
+
+</body>
+</html>
